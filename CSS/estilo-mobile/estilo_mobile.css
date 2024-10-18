@@ -1,0 +1,182 @@
+/*GENERALES*/
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: rgb(224, 223, 223);
+    font-family: sans-serif;
+}
+
+li {
+    background-color: rgba(240, 240, 240, 0.61);
+}
+
+
+p,
+.cont_Li_interno h3 {
+    margin: auto 0 auto 10px;
+}
+
+
+.cont_imagen_de_fondo {
+    position: fixed;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+.cont_imagen_de_fondo img {
+    width: 100%;
+    height: 100%;
+}
+
+header h1 {
+    color: #fff;
+}
+
+/*GENERALES FIN*/
+
+
+
+
+
+@media (max-width: 575.98px)and (orientation:portrait) {
+
+
+    header {
+        width: 100%;
+        height: 80px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    nav {
+        width: 100%;
+        height: 150px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .cont_categorias {
+        width: 95%;
+        height: 100%;
+
+        display: flex;
+        gap: 10px;
+        overflow: scroll;
+    }
+
+    nav button {
+        height: 50%;
+        padding: 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        margin: auto 0 auto 0;
+        background-color: #fff;
+    }
+
+
+
+    /*BARRA DE BUSQUEDA*/
+    .cont_externo_barra_busqueda {
+        width: 100%;
+        height: 70px;
+        margin-top: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .cont_barra_de_busqueda {
+        width: 70%;
+        height: 60%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .cont_barra_de_busqueda input {
+        grid-column: 1 / 5;
+        grid-row: 1 / -1;
+
+        padding-left: 15px;
+        font-size: 20px;
+        border: none;
+    }
+
+
+    /*icono barra busqueda*/
+    .cont_barra_de_busqueda button {
+        grid-column: 5 / -1;
+        grid-row: 1 / -1;
+        border: none;
+    }
+
+    .cont_barra_de_busqueda button img {
+        width: 70%;
+        height: 70%;
+    }
+
+
+
+
+
+
+    /*GALERIA*/
+    #cont_galeria {
+        width: 100%;
+        height: auto;
+    }
+
+
+    li {
+        width: 200px;
+        height: 300px;
+        border-radius: 1em;
+        overflow: hidden;
+        margin: 50px auto 50px auto;
+    }
+
+    .cont_Li_interno {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+    }
+
+
+
+    .cont_imagen {
+        grid-column: 1 / -1;
+        grid-row: 1 / 5;
+        background-color: #fff;
+        padding: 10px;
+    }
+
+    .cont_imagen img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cont_Li_interno h3 {
+        text-align: center;
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/estilo-mobile/estilo_mobile.css">
+    <link rel="stylesheet" href="./CSS/estilos_tabletas/estilos_tabletas.css">
+    <link rel="stylesheet" href="./CSS/estilos_PC/estilos_PC.css">
+    <link rel="stylesheet" href="./CSS/ventana_modal/ventana_modal.css">
+    <title>Mi PokeApi</title>
+</head>
+
+<body>
+
+    <div class="cont_imagen_de_fondo">
+        <img src="./IMAGEN DE FONDO/1351785.png" alt="">
+    </div>
+
+    <header>
+        <h1>Mi PokeApi</h1>
+    </header>
+
+    <nav>
+        <div class="cont_categorias">
+            <button class="boton_categoria" onclick="(CARGA_INICIAL())">Todos</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('fire')">Fuego</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('water')">Agua</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('electric')">Electro</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('grass')">Hierba</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('bug')">Insecto</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('poison')">Veneno</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('ground')">Tierra</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('fairy')">Magia</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('psychic')">Psiquico</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('fighting')">Lucha</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('rock')">Roca</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('ghost')">Fantasma</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('ice')">Hielo</button>
+            <button class="boton_categoria" onclick="COMPROBACION_ESTADO_DE_PAGINA_CATEGORIA('normal')">Normal</button>
+        </div>
+    </nav>
+
+
+    <div class="cont_externo_barra_busqueda">
+        <div class="cont_barra_de_busqueda">
+            <input type="text" name="" id="barra_buscador" list="lista" placeholder="Buscar..">
+            <datalist id="lista"></datalist>
+            <button id="boton_buscador"><img src="./iconos/icono_lupa.png" alt="icono_lupa"></button>
+        </div>
+    </div>
+
+
+    <ul id="cont_galeria"></ul>
+
+
+    <div id="cont_verificacion">
+        <img id="imagen_verificacion" src="./iconos/R.gif" alt="">
+        <style>
+            #cont_verificacion {
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                grid-column: 3 / 4;
+                grid-row: 1 / -1;
+            }
+            #cont_verificacion img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </div>
+
+
+
+    <section id="body_modal">
+        <div class="modal_externo" id="modal_externo">
+            <div class="cont_modal_imagen"><img id="imagen_modal" src="" alt=""></div>
+
+
+            <div class="cont_modal_nombre">
+                <h1 id="nombre_modal_pokemon">nombre</h1>
+            </div>
+
+
+            <div class="cont_modal_caracteristicas">
+                <h2>caracteristicas:</h2>
+
+                <div class="cont_caracteristicas">
+                    <p id="dalud">salud:</p>
+                    <p id="ataque">ataque:</p>
+                    <p id="defensa">defensa:</p>
+                    <p id="ataque_especial">ataque especial:</p>
+                    <p id="defensa_especial">defensa especial:</p>
+                    <p id="velocidad">velocidad:</p>
+                </div>
+            </div>
+
+            <button id="boton_modal_cerrar">X</button>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--libreria alerta-->
+    <script src="./JS/Barra Buscador/barra_buscador.js"></script>
+    <script src="./JS/carga_inicial_datos_api/carga_inicial.js"></script>
+    <script src="./JS/seleccion_de_categoria/seleccion_categoria.js"></script>
+    <script src="./JS/ventana_modal/ventana_modal.js"></script>
+    <script src="./JS/Barra Buscador/funcion_buscando_por_nombre/buscando_por_nombre.js"></script>
+</body>
+
+</html>
